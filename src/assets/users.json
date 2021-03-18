@@ -1,0 +1,28 @@
+[{"firstname":"Daniel",
+    "lastname":"Friedman",
+    "email":"dafriedman443@gmail.com",
+    "password":"123"
+
+},
+{"firstname":"Dave",
+    "lastname":"Warren",
+    "email":"davew@gmail.com",
+    "password":"456"
+
+},
+{"firstname":"Susan",
+    "lastname":"Harris",
+    "email":"sharris@gmail.com",
+    "password":"789"
+
+},
+{"firstname":"Rachel",
+    "lastname":"Smith",
+    "email":"rachels@gmail.com",
+    "password":"1010"
+
+}
+
+
+
+]

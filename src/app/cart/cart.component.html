@@ -1,0 +1,35 @@
+<div class="container row">
+    <h1>Cart</h1>
+    <hr>
+    <br>
+    <div class="carts-body-container row">
+        <div class="cart-product-container container row" *ngFor="let item of cartProducts;let i = index">
+            <div class="col-md-5">
+                <img class="custom-image-style" [src]='item.img'>
+            </div>
+            <div class="cart-product-desc col-md-3">
+                <div><p>{{item.title}}</p></div>
+                <div><p><strong>{{item.price*item.qt}}</strong></p></div>
+            </div>
+            <div class="edit-cart-container col-md-2">
+                <input (change)="updateTotal()"[(ngModel)]="item.qt" type="number" class="form-control">
+            
+            </div>
+            <div id="xButton" class="col-md-2">
+                <a class="text-danger" (click)="removeItem(i)"><strong>x</strong></a>
+            </div>
+        </div> 
+    </div>
+</div>
+<div id="no-content" class="container row" *ngIf="bill === 0">
+    <div class="col-md-4 offset-md-4">No Items In Cart</div>
+</div>
+<div class="bill-container">
+<div class="col-md-4 offset-md-2">
+<button class="btn btn-success btn-lg pull-left" (click)="payBill()">Pay Bill</button>
+</div>
+<div class="col-md-4">
+<span *ngIf="cartProducts === null"><strong>$0</strong></span>
+<span *ngIf="cartProducts !== null"><strong>${{bill}}</strong></span>
+</div>
+</div>

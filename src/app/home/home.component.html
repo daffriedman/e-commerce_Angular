@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <h1>Home</h1>
+  </div>
+</div>
+<hr />
+
+<div class="container">
+  <div
+    ng2-carouselamos
+    class="slide-wrapper"
+    [items]="products"
+    [width]="900"
+    [$prev]="prev"
+    [$next]="next"
+    [$item]="item"
+  ></div>
+  <ng-template #prev>
+    <img
+      src="https://cdn0.iconfinder.com/data/icons/website-lineicons/288/Previous-256.png"
+      id="left"
+    />
+  </ng-template>
+  <ng-template #next>
+    <img
+      src="https://cdn0.iconfinder.com/data/icons/website-lineicons/288/Next-512.png"
+      id="right"
+    />
+  </ng-template>
+  <ng-template #item let-item let-i="index">
+    <div class="items">
+      <img id="itemImages" src="{{ item.img }}" />
+      {{ item.title }}
+    </div>
+  </ng-template>
+</div>
+<div id="pitch-text">
+<p ><h3><b>Above is a preview of Our Products. After logging you will be able to see more details and actually make a purchase </b></h3>
+</div>

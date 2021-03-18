@@ -1,0 +1,22 @@
+<div class="container row">
+  <h1>ABOUT Page</h1>
+</div>
+<hr />
+<div class="about-container row container">
+  <div class="col-md-1"></div>
+  <div class="col-md-10" *ngFor="let data of about">
+    <h3>About Us</h3>
+    <p>{{data.about}}</p>
+    <h3>Contact Us:</h3>
+    <ul>
+      <li>Phone Number:{{data.phone}}</li>
+      <li>Email:{{data.email}}</li>
+    </ul>
+    
+    <h3>How This Site Works</h3>
+    <p>{{data.siteworks}}</p>
+
+    <h3>Privacy Policy</h3>
+    <p>{{data.ppolicy}}</p>
+  </div>
+</div>
