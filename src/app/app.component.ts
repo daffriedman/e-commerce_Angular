@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {AuthguardService} from './authguard.service';
-import {Router} from '@angular/router';
+import { AuthguardService } from './authguard.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,14 +9,18 @@ import {Router} from '@angular/router';
 export class AppComponent {
   title = 'ecommerce';
   url;
-constructor(private authGServ:AuthguardService,private router:Router){
-
-}
-logout(){
-  this.authGServ.loggedStatus = false;
-  alert('You have been Logged Out and your access to the purchasing method will be denied')
-  this.router.navigateByUrl('/home');
-}
+  constructor(private authGServ: AuthguardService, private router: Router) {}
+  logout() {
+    if ((this.authGServ.loggedStatus ===false)) {
+      return;
+    } else {
+      this.authGServ.loggedStatus = false;
+      alert(
+        'You have been Logged Out and your access to the purchasing method will be denied'
+      );
+      this.router.navigateByUrl('/home');
+    }
+  }
 
   add(title, url) {}
 }
