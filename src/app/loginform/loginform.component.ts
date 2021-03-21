@@ -31,7 +31,7 @@ usersArray:User[];
   }
   onSubmit() {
     if (this.loginForm.valid && this.loginForm.controls.email.value === this.userEmail && this.loginForm.controls.password.value === this.password) {
-      alert('Welcome!!!');
+     
       this.loginForm.reset();
       this.authGServ.loggedStatus =true;
       this.router.navigateByUrl('/home');
