@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import {Product} from '../models/product.model';
+import { Product } from '../models/product.model';
 import { ProductsService } from '../products.service';
 
 @Component({
@@ -11,13 +11,10 @@ import { ProductsService } from '../products.service';
 export class ProductsComponent implements OnInit {
   products: Product[];
   cartProducts: any;
-  constructor(private router: Router, private productsServ: ProductsService) {
-
-    
-  }
+  constructor(private router: Router, private productsServ: ProductsService) {}
 
   ngOnInit(): void {
-     this.getProducts();
+    this.getProducts();
     let data = sessionStorage.getItem('cart');
     if (data !== null) {
       this.cartProducts = JSON.parse(data);
@@ -29,9 +26,8 @@ export class ProductsComponent implements OnInit {
   getProducts() {
     this.productsServ.getProductData().subscribe((productsData: Product[]) => {
       let data = productsData;
-      this.products =data 
+      this.products = data;
       console.log(`In the Product getProducts func ${this.products}`);
-      
     });
   }
   addToCart(index) {
@@ -45,7 +41,6 @@ export class ProductsComponent implements OnInit {
     cartData.push(product);
     this.upDataCartData(cartData);
     sessionStorage.setItem('cart', JSON.stringify(cartData));
-    // this.products[index].isAdded = true;
   }
 
   upDataCartData(cartData) {

@@ -14,7 +14,7 @@ import { ProductsService } from '../products.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit, AfterViewChecked {
-  products: Product[];
+  products: Product[] = [];
   constructor(
     private productsServ: ProductsService,
     private changeDetector: ChangeDetectorRef
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit, AfterViewChecked {
   getProducts() {
     this.productsServ.getProductData().subscribe((productsData: Product[]) => {
       let data = productsData;
-      this.products=data;
+      this.products = data;
       console.log(this.products);
     });
   }
