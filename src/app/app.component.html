@@ -12,7 +12,7 @@
         </li>
         <li *ngIf="authGServ.loggedStatus"><a routerLink="/cart" routerLinkActive="active">Cart</a></li>
 
-        <li>
+        <li *ngIf="!authGServ.loggedStatus">
           <a routerLink="/login" routerLinkActive="active">Login</a>
         </li>
         <li *ngIf="authGServ.loggedStatus">
