@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthguardService } from './authguard.service';
+
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
@@ -9,9 +10,11 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'ecommerce';
   url;
-  constructor(private authGServ: AuthguardService, private router: Router) {}
+  constructor(public authGServ: AuthguardService, private router: Router) {}
+  ngOnInit(): void {}
+
   logout() {
-    if ((this.authGServ.loggedStatus ===false)) {
+    if (this.authGServ.loggedStatus === false) {
       return;
     } else {
       this.authGServ.loggedStatus = false;

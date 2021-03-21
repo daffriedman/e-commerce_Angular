@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "recipebackend-4795c": {
+      "hosting": {
+        "ecommerce": [
+          "recipebackend-4795c"
+        ]
+      }
+    }
+  }
+}

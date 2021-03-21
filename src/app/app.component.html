@@ -7,15 +7,15 @@
       <ul class="navbar-nav mr-auto">
         <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
         <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-        <li>
+        <li *ngIf="authGServ.loggedStatus">
           <a routerLink="/products" routerLinkActive="active">Products</a>
         </li>
-        <li><a routerLink="/cart" routerLinkActive="active">Cart</a></li>
+        <li *ngIf="authGServ.loggedStatus"><a routerLink="/cart" routerLinkActive="active">Cart</a></li>
 
         <li>
           <a routerLink="/login" routerLinkActive="active">Login</a>
         </li>
-        <li>
+        <li *ngIf="authGServ.loggedStatus">
           <span id="logout" (click)="logout()">Logout</span>
         </li>
       </ul>
