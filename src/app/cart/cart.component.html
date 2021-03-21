@@ -9,7 +9,7 @@
             </div>
             <div class="cart-product-desc col-md-3">
                 <div><p>{{item.title}}</p></div>
-                <div><p><strong>{{item.price*item.qt}}</strong></p></div>
+                <div><p><strong>${{item.price*item.qt}}</strong></p></div>
             </div>
             <div class="edit-cart-container col-md-2">
                 <input (change)="updateTotal()"[(ngModel)]="item.qt" type="number" class="form-control">

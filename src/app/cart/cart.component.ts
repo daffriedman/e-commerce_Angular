@@ -37,15 +37,7 @@ export class CartComponent implements OnInit {
         this.bill + this.cartProducts[i].price * this.cartProducts[i].qt;
     }
   }
-  // removeItem(id) {
-  //   this.cartProducts.splice(id, 1);
-  //   this.updateTotal();
-  //   if (this.cartProducts.length) {
-  //     sessionStorage.setItem('cart', JSON.stringify(this.cartProducts));
-  //   } else {
-  //     sessionStorage.setItem('cart', null);
-  //   }
-  // }
+ 
   removeItem(id) {
     this.cartProducts.splice(id, 1);
     this.updateTotal();
@@ -53,7 +45,7 @@ export class CartComponent implements OnInit {
     if (this.cartProducts.length) {
       sessionStorage.setItem('cart', JSON.stringify(this.cartProducts));
     } else {
-      // sessionStorage.setItem('cart', null);
+      
       sessionStorage.removeItem('cart')
     }
   }

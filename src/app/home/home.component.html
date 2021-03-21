@@ -36,10 +36,16 @@
 </div>
 <div id="pitch-text">
   <p></p>
-  <h3>
+  <h3 *ngIf="!authGServ.loggedStatus">
     <b
       >Above is a preview of Our Products. After logging in you will be able to
-      see more details and actually make a purchase.Enjoy!!
+      see more details and actually make a purchase.
+    </b>
+  </h3>
+  <h3 *ngIf="authGServ.loggedStatus"> 
+    <b>
+      Welcome you can now proceed to the products and cart pages to successfully purchase items.<br>
+      Happy Shopping!!
     </b>
   </h3>
 </div>

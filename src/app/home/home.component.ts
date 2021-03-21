@@ -7,7 +7,7 @@ import {
 
 import { Product } from '../models/product.model';
 import { ProductsService } from '../products.service';
-
+import { AuthguardService } from '../authguard.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,7 +15,7 @@ import { ProductsService } from '../products.service';
 })
 export class HomeComponent implements OnInit, AfterViewChecked {
   products: Product[] = [];
-  constructor(
+  constructor(public authGServ: AuthguardService,
     private productsServ: ProductsService,
     private changeDetector: ChangeDetectorRef
   ) {}

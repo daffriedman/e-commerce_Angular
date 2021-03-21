@@ -21,9 +21,9 @@ export class AppComponent {
       alert(
         'You have been Logged Out and your access to the purchasing method will be denied'
       );
+      sessionStorage.clear();
       this.router.navigateByUrl('/home');
     }
   }
 
-  add(title, url) {}
 }
