@@ -7,7 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import {UsersService} from '../../services/users.service';
-import {AuthguardService} from '../../services/authguard.service';
+import {AuthguardService} from '../../authentication/authguard.service';
 import {User} from '../../models/user.model';
 @Component({
   selector: 'app-loginform',

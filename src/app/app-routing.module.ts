@@ -6,7 +6,7 @@ import { ProductsComponent } from './comps/products/products.component';
 import { CartComponent } from './comps/cart/cart.component';
 
 import { LoginformComponent } from './comps/loginform/loginform.component';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './authentication/auth.guard';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },

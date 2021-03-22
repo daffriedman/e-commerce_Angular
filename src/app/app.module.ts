@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginformComponent } from './comps/loginform/loginform.component';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './authentication/auth.guard';
 
 @NgModule({
   declarations: [
