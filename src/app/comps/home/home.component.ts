@@ -5,9 +5,9 @@ import {
   ChangeDetectorRef,
 } from '@angular/core';
 
-import { Product } from '../models/product.model';
-import { ProductsService } from '../products.service';
-import { AuthguardService } from '../authguard.service';
+import { Product } from '../../models/product.model';
+import { ProductsService } from '../../services/products.service';
+import { AuthguardService } from '../../services/authguard.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

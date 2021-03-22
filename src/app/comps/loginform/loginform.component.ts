@@ -6,9 +6,9 @@ import {
   FormControl,
   Validators,
 } from '@angular/forms';
-import {UsersService} from '../users.service';
-import {AuthguardService} from '../authguard.service';
-import {User} from '../models/user.model';
+import {UsersService} from '../../services/users.service';
+import {AuthguardService} from '../../services/authguard.service';
+import {User} from '../../models/user.model';
 @Component({
   selector: 'app-loginform',
   templateUrl: './loginform.component.html',

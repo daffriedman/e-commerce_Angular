@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ProductsComponent } from './products/products.component';
-import { CartComponent } from './cart/cart.component';
+import { HomeComponent } from './comps/home/home.component';
+import { AboutComponent } from './comps/about/about.component';
+import { ProductsComponent } from './comps/products/products.component';
+import { CartComponent } from './comps/cart/cart.component';
 
-import { LoginformComponent } from './loginform/loginform.component';
+import { LoginformComponent } from './comps/loginform/loginform.component';
 import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
