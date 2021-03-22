@@ -8,6 +8,7 @@ import {
 import { Product } from '../../models/product.model';
 import { ProductsService } from '../../services/products.service';
 import { AuthguardService } from '../../authentication/authguard.service';
+import { UsersService } from '../../services/users.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,14 +16,19 @@ import { AuthguardService } from '../../authentication/authguard.service';
 })
 export class HomeComponent implements OnInit, AfterViewChecked {
   products: Product[] = [];
-  constructor(public authGServ: AuthguardService,
+  loggedInUserName;
+  constructor(
+    public authGServ: AuthguardService,
     private productsServ: ProductsService,
-    private changeDetector: ChangeDetectorRef
+    private changeDetector: ChangeDetectorRef,
+    private userServ: UsersService
   ) {}
 
   ngOnInit(): void {
     this.getProducts();
+    this.setLoggedInUserName();
   }
+
   ngAfterViewChecked() {
     this.changeDetector.detectChanges();
   }
@@ -33,5 +39,9 @@ export class HomeComponent implements OnInit, AfterViewChecked {
       this.products = data;
       console.log(this.products);
     });
+  }
+
+  setLoggedInUserName() {
+    this.loggedInUserName = this.userServ.loggedInUser;
   }
 }

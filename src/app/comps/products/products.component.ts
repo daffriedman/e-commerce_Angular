@@ -47,6 +47,7 @@ export class ProductsComponent implements OnInit {
     cartData.push(product);
     this.upDataCartData(cartData);
     sessionStorage.setItem('cart', JSON.stringify(cartData));
+    this.productsServ.addToCart(product)
   
   }
 

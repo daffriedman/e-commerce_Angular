@@ -1,13 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { User } from '../models/user.model';
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsersService {
+  loggedInUser = '';
+  constructor(private httpClient: HttpClient) {}
 
-  constructor(private httpClient: HttpClient) { }
-
-  getUsers(){
-    return this.httpClient.get('assets/users.json');
+  getUsers() {
+    return this.httpClient.get<User[]>('assets/users.json');
+  }
+  setUser(userName) {
+    this.loggedInUser = userName;
+    console.log(
+      `In the userService this is the name of the user${this.loggedInUser} `
+    );
   }
 }
