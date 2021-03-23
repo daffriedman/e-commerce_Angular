@@ -1,0 +1,42 @@
+<form
+  [formGroup]="signInForm"
+  (ngSubmit)="onSubmit()"
+  class="text-center border border-light p-5"
+  [formGroup]="signInForm"
+>
+  <p class="h4 mb-4">Sign Up</p>
+
+  <input
+    type="text"
+    formControlName="firstName"
+    id="defaultRegisterFormFirstName"
+    class="form-control mb-4"
+    placeholder="First Name"
+  />
+  <input
+    type="text"
+    formControlName="lastName"
+    id="defaultRegisterFormLastName"
+    class="form-control mb-4"
+    placeholder="Last Name"
+  />
+  <input
+    type="email"
+    formControlName="email"
+    id="defaultRegisterFormEmail"
+    class="form-control mb-4"
+    placeholder="E-mail"
+  />
+  <div class="col">
+    <input
+      type="text"
+      formControlName="password"
+      id="defaultRegisterFormPassword"
+      class="form-control"
+      placeholder="Password"
+    />
+  </div>
+  <button class="btn btn-info my-4 btn-block" type="submit">Sign Up</button>
+
+  <hr />
+</form>

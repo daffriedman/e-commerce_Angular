@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginformComponent } from './comps/loginform/loginform.component';
 import { AuthGuard } from './authentication/auth.guard';
+import { SignupComponent } from './comps/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,8 @@ import { AuthGuard } from './authentication/auth.guard';
     AboutComponent,
 
     LoginformComponent,
+
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

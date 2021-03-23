@@ -4,7 +4,7 @@ import { HomeComponent } from './comps/home/home.component';
 import { AboutComponent } from './comps/about/about.component';
 import { ProductsComponent } from './comps/products/products.component';
 import { CartComponent } from './comps/cart/cart.component';
-
+import {SignupComponent} from './comps/signup/signup.component';
 import { LoginformComponent } from './comps/loginform/loginform.component';
 import { AuthGuard } from './authentication/auth.guard';
 const routes: Routes = [
@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'products', component: ProductsComponent, canActivate: [AuthGuard] },
   { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
-
+{path:'signup', component:SignupComponent},
   { path: 'login', component: LoginformComponent },
 ];
 

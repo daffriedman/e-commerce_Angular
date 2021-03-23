@@ -18,4 +18,8 @@ export class UsersService {
       `In the userService this is the name of the user${this.loggedInUser} `
     );
   }
+  addNewUserToTheDb(newUser){
+    console.log(`In the users service in the addNewUserToTheDb func ${newUser}`);
+    
+  }
 }
